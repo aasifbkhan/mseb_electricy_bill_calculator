@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light bill calculator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+  </head>
+  <body class="roboto-regular">
+    <div class="text-white bg-primary p-3">
+      <div class="d-flex justify-content-between">
+        <h2 class="text-center m-0">MSEB Light Bill calculator</h2>
+        <div id="google_translate_element"></div>
+      </div>
+    </div>
+    <marquee class="bg-info p-1" behavior="scroll" direction="left"
+      >&#128161; This light bill calculator calculates the montly bill
+      &#128161;</marquee
+    >
+    <div class="container">
+      <div class="row justify-content-center border-bottom">
+        <div class="col col-sm-12 col-md-6 col-lg-4">
+          <div class="alert alert-primary" role="alert">
+            It will also include<br />16% Viz aakaar<br />
+            1.17 / Unit Vahan Aakaar
+          </div>
+          <div class="mb-2">
+            <label for="total-unit" class="form-label">Unit consumed</label>
+            <input
+              class="form-control"
+              type="number"
+              id="units"
+              placeholder="Enter Units"
+              aria-label="total-unit input"
+            />
+          </div>
+          <div class="mb-2">
+            <label for="sthir-aakaar" class="form-label">Sthir Aakaar</label>
+            <input
+              class="form-control"
+              id="sthir_aakaar"
+              type="number"
+              placeholder="Enter Sthir Aakaar"
+              aria-label="sthir aakaar input"
+            />
+          </div>
+          <div class="text-center mb-2">
+            <button type="button" id="calculate-bill" class="btn btn-primary">
+              Calculate
+            </button>
+          </div>
+        </div>
+      </div>
+      <h3>Results</h3>
+      <div class="table-responsive">
+        <table class="table table-sm table-striped table-bordered">
+          <tbody>
+            <tr>
+              <td>Sthir Aakaar</td>
+              <td id="td-sthir-aakaar">00.00 /-</td>
+            </tr>
+            <tr>
+              <td>Viz Aakaar</td>
+              <td id="td-viz-aakaar">00.00 /-</td>
+            </tr>
+            <tr>
+              <td>Vahan Aakaar @ &#8377; 1.17/Unit</td>
+              <td id="td-vahan-aakaar">00.00 /-</td>
+            </tr>
+            <tr>
+              <td>Indhan Samayojan Aakaar</td>
+              <td id="td-isa-aakaar">00.00 /-</td>
+            </tr>
+            <tr>
+              <td>Viz Shulka 16.00 % </td>
+              <td id="td-viz-shulk">00.00 /-</td>
+            </tr>
+            <tr>
+              <td>Total Payable amount</td>
+              <td id="td-total-payable" class="bg-success text-white fw-bold">
+                00.00 /-
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,hi,mr,ur",
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          },
+          "google_translate_element"
+        );
+      }
+    </script>
+    <script src="asset/js/calculate.js"></script>
+  </body>
+</html>
